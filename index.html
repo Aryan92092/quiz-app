@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="category-select">
+    <h1>Select Quiz Category</h1>
+    <select id="category">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+    </select>
+    <button id="start-quiz">Start Quiz</button>
+    <button id="toggle-theme">Toggle Theme</button>
+  </div>
+
+  <div class="quiz-container hidden" id="quiz-box">
+    <div id="progress">Question <span id="current-q"></span> of <span id="total-q"></span></div>
+    <div id="timer">Time Left: <span id="time">15</span>s</div>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="next-btn" disabled>Next</button>
+  </div>
+
+  <div class="quiz-container hidden" id="result-box">
+    <h2>Quiz Completed!</h2>
+    <p id="score"></p>
+    <p id="feedback"></p>
+    <button onclick="location.reload()">Restart</button>
+    <button id="share-btn">Share Result</button>
+  </div>
+<script src="script.js"></script>
+
+</body>
+</html>
